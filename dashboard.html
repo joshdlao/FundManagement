@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard</title>
+
+</head>
+
+<body>
+    <!-- Header Content -->
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="metrobanklogo.png" alt="logo" class="logo">
+            </div>
+            <div class="banktext">
+                <h3>Metro Bank</h3>
+                <p>You're in good hands.</p>
+            </div>
+        </div>
+
+        <div class="welcome">
+            <h3>Welcome! (Nickname)</h3>
+            <p>random message</p>
+        </div>
+
+        <div class="login_icon">
+            <img src="login_icon.png" alt="loginlogo" class="login_icon">
+        </div>
+
+    </header>
+
+    <!-- Sidebar -->
+    <nav>
+        <div class="slide">
+            <ul class="sidebar">
+                <li><a href="#" class="nav-link" onclick="showDashboard()"><i class="fa fa-tv"></i> <span
+                            class="nav-item">Dashboard</span></a></li>
+                <li><a href="#" class="nav-link" onclick="showsearchBar()"><i class="fas fa-search"></i><span
+                            class="nav-item">Search</span></a></li>
+                <li><a href="#" class="nav-link" onclick="showcalculatorPage()"><i class="fa fa-bar-chart"></i><span
+                            class="nav-item">Calculator</span></a></li>
+                <li><a href="#" class="nav-link" onclick="showinformationPage()"><i class="fa fa-book"></i><span
+                            class="nav-item">Information Page</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Dashboard Employee Content -->
+        <div class="dashboard-content" id="dashboard-content" style="display: none;">
+            <section class="table-content">
+                <div class="card">
+                    <h3>Current Working Capital Summary</h3>
+                    <table>
+                        <tr class="tableHeader">
+                            <th>Current Assests</th>
+                            <th>P10,000</th>
+                        </tr>
+
+                        <tr>
+                            <td>Cash</td>
+                            <td>P2,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Account Recievable</td>
+                            <td>P2,000</td>
+                        </tr>
+                        <tr>
+                            <td>Inventory</td>
+                            <td>P2,000</td>
+                        </tr>
+                        <tr>
+                            <td>Pre-paid Expenses</td>
+                            <td>P4,000</td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <tr class="tableHeader">
+                            <th>Current Liabilities</th>
+                            <th>P70,000</th>
+                        </tr>
+
+                        <tr>
+                            <td>Accounts Payable</td>
+                            <td>P10,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bank Operating Credit</td>
+                            <td>P20,000</td>
+                        </tr>
+                        <tr>
+                            <td>Accured Exepnses</td>
+                            <td>P35,000</td>
+                        </tr>
+                        <tr>
+                            <td>Taxes Payable</td>
+                            <td>P5,000</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+            <div class="card-graph">
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Search Content -->
+        <div class="search-content" id="search-content" style="display: none;">
+            <h1>asdaasdasdasdasdsadasd</h1>
+        </div>
+
+        <!-- Form Content -->
+        <div class="calculator-content" id="calculator-content" style="display: none;">
+            <section class="form-content">
+
+                <div class="form-container">
+                    <h2>PRN</h2>
+
+                    <div class="steps">
+                        <div class="step active">
+                            1 <span>Generate<br><small>Payment Reference Number</small></span>
+                        </div>
+                        <div class="step">
+                            2 <span>Review<br><small>Review Account Information</small></span>
+                        </div>
+                    </div>
+
+                    <div class="form-fields">
+                        <select>
+                            <option>Select Option</option>
+                        </select>
+
+                        <div class="field-row">
+                            <input type="text" placeholder="Field 1">
+                            <input type="text" placeholder="Field 2">
+                        </div>
+
+                        <select>
+                            <option>Select Option</option>
+                        </select>
+
+                        <div class="field-row">
+                            <input type="text" placeholder="Field 3">
+                            <input type="text" placeholder="Field 4">
+                        </div>
+                    </div>
+                </div>
+                <div class="generate-box">
+                    <h3>Generate Box</h3>
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero cupiditate nostrum saepe
+                        obcaecati maiores optio eveniet, inventore,
+                        commodi delectus praesentium atque accusantium modi amet voluptates odio unde, nemo doloremque
+                        in!</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Privacy Policy Content -->
+        <div class="information-content" id="information-content" style="display: none;">
+            <div class="content">
+                <h2>Policy Update</h2>
+                <h4>1.Revised Withdrawal Rules</h4>
+                <ul>
+                    <li>The minimum withrawl amount increased to P5,000.</li>
+                    <li>Processing time updated to 3-5 business days for faster service.</li>
+                    <li>Early withdrawals (before 5 years of contribution) will now require additionalk supporting
+                        documents.</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h4>2.Updated contribution Limits</h4>
+                <ul>
+                    <li>Monthly maximum contributions increased to P20,000 to allow for greater savings.</li>
+                    <li>Employer Matching contribution adjusted to 10% of employee input.</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h4>3. Predictive Insights Use Policy</h4>
+                <ul>
+                    <li>Our new predictive analytics feature will use historical data to provide savings and retirement
+                        projections.</li>
+                    <li>All data used is anonymized and handle with strict confidentiality under our updated Data
+                        Privacy Policy.</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h4>4.Transparency if Fund Tracking</h4>
+                <ul>
+                    <li>Real-Time updates are now available via our new Fund Tracker Dashboard, showing detailed logs of
+                        contributions, interest accrual, and fund growth.</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h2>System Updates</h2>
+                <h4>1. Real-Time Contribution Insights</h4>
+                <ul>
+                    <li>View your monthly contributions, employer shares, and interest earnings in real-time with
+                        improved chart visuals and breakdowns</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h4>2.Predictive Fund Projection</h4>
+                <ul>
+                    <li>Get an automated forecast of your fund growth based on your current contribution rate and
+                        withdrawal plans.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Help & Support</a>
+            <a href="#">About Us</a>
+            <a href="#">Security and Policy</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script src="graph.js"></script>
+</body>
+
+</html>
